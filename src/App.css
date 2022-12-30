@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@100;200;400;500;700&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -5,6 +6,11 @@
 .App {
   height: 200vh;
 }
+body {
+  scroll-snap-type: mandatory;
+  scroll-behavior: smooth;
+}
+
 /* nav */
 #nav-bar {
   display: flex;
@@ -14,7 +20,7 @@
   justify-content: space-between;
   background-color: #2595becc;
   backdrop-filter: blur(20px);
-  padding: 10px 0;
+  padding: 5px 0;
   font-family: "Red Hat Display", sans-serif;
 }
 
@@ -44,7 +50,6 @@ nav img {
   align-items: center;
   justify-content: center;
   font-family: "Red Hat Display", sans-serif;
-  margin-bottom: 60px;
 }
 .intro-content {
   display: flex;
@@ -66,10 +71,11 @@ nav img {
   width: 225px;
 }
 #intro-desc {
+  font-family: "Poppins";
   color: #5baacb;
   max-width: 900px;
-  font-weight: 200;
-  font-size: 1.15rem;
+  font-weight: 400;
+  font-size: 1rem;
   text-align: center;
   margin-top: 20px;
   transition: 1s ease-in-out;
@@ -112,12 +118,84 @@ nav img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow-x: scroll;
+  transition: 1.6s;
+  transform: translateX(-100vh);
+  opacity: 0;
 }
 .skills-heroes-content {
+  border-radius: 10px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   background-color: #5baacb;
+  box-shadow: 0px 0px 10px 3px rgba(104, 104, 104, 0.384);
 }
+.skill-heroes-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Red Hat Display", sans-serif;
+  color: white;
+  padding: 20px;
+}
+
 .skills-heroes-content img {
-  width: 200px;
+  width: 150px;
+}
+
+#skills-title {
+  z-index: -1;
+  transition: 1.5s ease-in-out;
+  transition-delay: 0.6s;
+  opacity: 0;
+  transform: translateY(100px);
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 3rem;
+  padding-bottom: 20px;
+  color: #07394bcc;
+}
+@media screen and (max-width: 1000px) {
+  .skills-heroes-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .skills-heroes-content img {
+    width: 100px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .skills-heroes-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .skills-heroes-content img {
+    width: 100px;
+  }
+}
+
+/* work section */
+
+.work-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Red Hat Display", sans-serif;
+}
+#worktitle {
+  font-size: 5rem;
+}
+.myovies-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#myovies-title {
+  font-size: 4rem;
+}
+#myovies-startpage-laptop {
+  width: 60%;
+}
+#myovies-desc-phone {
+  width: 15%;
 }
