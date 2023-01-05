@@ -25,7 +25,7 @@ export default function intropage() {
       <div className="intro-content">
         <IntroTitle />
         <p ref={desc} id="intro-desc">
-          Hi! I am a React developer and graphic designer. Currently, I am
+          Hi! I am a React developer and graphic designer. I am currently
           attending a bootcamp to further develop my web development skills. I
           am passionate about technology and have created websites and apps
           using both React and Vanilla Javascript. <br /> I have been interested

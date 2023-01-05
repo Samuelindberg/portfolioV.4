@@ -25,6 +25,7 @@ export default function SkillsPage() {
             console.log("funkar");
             skillsSection.current.style.transform = "translateX(0)";
             skillsSection.current.style.opacity = 1;
+            skillsSection.current.scrollIntoView({ behavior: "smooth" });
           }
         });
       },

@@ -23,6 +23,9 @@ body {
   padding: 5px 0;
   font-family: "Red Hat Display", sans-serif;
 }
+.nav-icons a {
+  width: fit-content;
+}
 
 #nav-bar a {
   /* border: solid 1px white; */
@@ -112,21 +115,22 @@ nav img {
 
 /* skills page */
 .skills-section {
-  width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   overflow-x: scroll;
-  transition: 1.6s;
+  transition: 2s;
   transform: translateX(-100vh);
   opacity: 0;
+  padding-bottom: 100px;
 }
 .skills-heroes-content {
   border-radius: 10px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  max-width: 1400px;
   background-color: #5baacb;
   box-shadow: 0px 0px 10px 3px rgba(104, 104, 104, 0.384);
 }
@@ -155,9 +159,20 @@ nav img {
   padding-bottom: 20px;
   color: #07394bcc;
 }
+#skills-desc {
+  grid-column: 1/6;
+  padding: 30px;
+  text-align: center;
+  color: white;
+  font-family: "Poppins";
+  font-size: 1rem;
+}
 @media screen and (max-width: 1000px) {
   .skills-heroes-content {
     grid-template-columns: repeat(3, 1fr);
+  }
+  #skills-desc {
+    grid-column: 1/4;
   }
   .skills-heroes-content img {
     width: 100px;
@@ -166,6 +181,9 @@ nav img {
 @media screen and (max-width: 560px) {
   .skills-heroes-content {
     grid-template-columns: repeat(2, 1fr);
+  }
+  #skills-desc {
+    grid-column: 1/3;
   }
   .skills-heroes-content img {
     width: 100px;
@@ -178,24 +196,47 @@ nav img {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 30px;
+  padding-top: 30px;
+  height: 100vh;
   align-items: center;
   font-family: "Red Hat Display", sans-serif;
+  background-image: url("./assets/orangedotted.png");
+  background-attachment: fixed;
+  background-size: cover;
 }
 #worktitle {
   font-size: 5rem;
+  color: black;
 }
 .myovies-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 #myovies-title {
   font-size: 4rem;
+  color: #ff8d22;
+}
+.myovies-firstrow {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 #myovies-startpage-laptop {
   width: 60%;
+  /* transition: all 3s; */
 }
 #myovies-desc-phone {
   width: 15%;
+}
+.myovies-secondrow {
+  display: flex;
+  justify-content: flex-end;
+}
+#searchpage-laptop {
+  width: 60%;
 }

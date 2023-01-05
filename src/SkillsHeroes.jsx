@@ -30,6 +30,17 @@ export default function SkillsHeroes() {
           <h1>{skill[1]}</h1>
         </div>
       ))}
+      <p id="skills-desc">
+        As a skilled developer and designer, I have a strong foundation in HTML,
+        CSS, JavaScript and React, as well as experience with APIs and popular
+        design tools such as Illustrator, Photoshop, and Adobe XD. I have a good
+        eye for design, layout, animations, and colors, and I am able to create
+        responsive and user-friendly interfaces that are both functional and
+        aesthetically pleasing. <br /> Whether building a website from scratch
+        or improving the design of an existing site, I am always looking for
+        ways to push the boundaries of what is possible and deliver high-quality
+        solutions exceed expectations.
+      </p>
     </div>
   );
 }
