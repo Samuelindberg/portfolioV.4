@@ -1,5 +1,5 @@
 import React from "react";
-import searchpageLaptop from "./assets/myovies-searchpage-laptop.png";
+// import searchpageLaptop from "./assets/myovies-searchpage-laptop.png";
 
 export default function MyoviesSecondRow() {
   return (

@@ -1,9 +1,9 @@
 import "./App.css";
-import Nav from "./Nav";
-import Intropage from "./Intropage";
-import SkillsPage from "./SkillsPage";
+import Nav from "./components/Nav";
+import Intropage from "./components/intro-section/Intropage";
+import SkillsPage from "./components/skills-section/SkillsPage";
 import { useRef, useEffect } from "react";
-import WorkPage from "./WorkPage";
+import WorkPage from "./components/work-section/WorkPage";
 function App() {
   const skillsSection = useRef(null);
 

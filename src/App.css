@@ -23,9 +23,6 @@ body {
   padding: 5px 0;
   font-family: "Red Hat Display", sans-serif;
 }
-.nav-icons a {
-  width: fit-content;
-}
 
 #nav-bar a {
   /* border: solid 1px white; */

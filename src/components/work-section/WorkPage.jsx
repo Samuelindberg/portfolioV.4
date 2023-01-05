@@ -1,5 +1,5 @@
 import React from "react";
-import MyoviesSection from "./MyoviesSection";
+import MyoviesSection from "./Myovies/MyoviesSection";
 
 export default function WorkPage() {
   return (

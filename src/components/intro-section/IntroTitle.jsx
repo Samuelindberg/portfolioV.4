@@ -1,5 +1,5 @@
 import { useEffect, useRef, React } from "react";
-import profileimg from "./assets/profile.png";
+import profileimg from "../../assets/profile.png";
 export default function IntroTextContent() {
   // const graphicTitle = useRef(null);
   // let hasMoved = useRef(false);
