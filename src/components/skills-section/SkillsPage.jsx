@@ -22,7 +22,6 @@ export default function SkillsPage() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            console.log("funkar");
             skillsSection.current.style.transform = "translateX(0)";
             skillsSection.current.style.opacity = 1;
             skillsSection.current.scrollIntoView({ behavior: "smooth" });
@@ -38,7 +37,7 @@ export default function SkillsPage() {
     };
   }, []);
   return (
-    <section ref={skillsSection} className="skills-section">
+    <section ref={skillsSection} className="skills-section flex-center-column">
       <h1 ref={Title} id="skills-title">
         MY SKILLS AND TOOLS
       </h1>

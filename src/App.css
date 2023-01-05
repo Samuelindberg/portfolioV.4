@@ -6,6 +6,18 @@
 .App {
   height: 200vh;
 }
+
+:root {
+  --primary: #2595becc;
+  --dark-text: #494848;
+  --light-text: #767676;
+}
+.flex-center-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 body {
   scroll-snap-type: mandatory;
   scroll-behavior: smooth;
@@ -18,7 +30,7 @@ body {
   align-items: center;
   width: 100vw;
   justify-content: space-between;
-  background-color: #2595becc;
+  background-color: var(--primary);
   backdrop-filter: blur(20px);
   padding: 5px 0;
   font-family: "Red Hat Display", sans-serif;
@@ -46,9 +58,6 @@ nav img {
 .intro-section {
   width: 100vw;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-family: "Red Hat Display", sans-serif;
 }
 .intro-content {
@@ -63,7 +72,7 @@ nav img {
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  border-bottom: 1px solid #5baacb;
+  border-bottom: 1px solid var(--primary);
   padding-bottom: 5px;
 }
 
@@ -85,13 +94,13 @@ nav img {
 #name {
   font-size: 4rem;
   font-weight: 700;
-  color: #494848;
+  color: var(--dark-text);
 }
 #juniordev {
   font-size: 2.3rem;
   font-weight: 400;
   letter-spacing: 1px;
-  color: #767676;
+  color: var(--light-text);
 }
 #graphic-title {
   opacity: 0;
@@ -113,10 +122,6 @@ nav img {
 /* skills page */
 .skills-section {
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   overflow-x: scroll;
   transition: 2s;
   transform: translateX(-100vh);
@@ -190,50 +195,105 @@ nav img {
 /* work section */
 
 .work-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 30px;
   padding-top: 30px;
-  height: 100vh;
-  align-items: center;
   font-family: "Red Hat Display", sans-serif;
-  background-image: url("./assets/orangedotted.png");
-  background-attachment: fixed;
-  background-size: cover;
 }
 #worktitle {
   font-size: 5rem;
-  color: black;
+  color: var(--dark-text);
+}
+.myovies-section {
+  background-image: url("./assets/dotted-orange.png");
+  background-attachment: fixed;
+  background-size: cover;
 }
 .myovies-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 20px;
+  margin: 0 20%;
+  /* background-color: rgba(255, 255, 255, 0.699); */
+  /* backdrop-filter: blur(10px); */
+  padding: 20px;
 }
 #myovies-title {
   font-size: 4rem;
+  text-align: center;
   color: #ff8d22;
 }
 .myovies-firstrow {
-  width: 100vw;
   display: flex;
-  justify-content: center;
   align-items: flex-end;
+  width: 80vw;
 }
 #myovies-startpage-laptop {
-  width: 60%;
+  /* width: minmax(400px, 30vw); */
+  min-width: 300px;
+  width: 50vw;
   /* transition: all 3s; */
 }
 #myovies-desc-phone {
-  width: 15%;
+  width: 200px;
 }
+
 .myovies-secondrow {
   display: flex;
   justify-content: flex-end;
 }
 #searchpage-laptop {
-  width: 60%;
+}
+#myovies-desc {
+  padding: 25px;
+  margin-top: 20px;
+  border-radius: 0.5rem;
+  background-color: white;
+  color: var(--light-text);
+  text-align: center;
+}
+/* tictactoe section */
+.tictactoe-section {
+  margin-top: 0px;
+  height: 100vh;
+  width: 60vw;
+  background-image: url("./assets/tictactoe/dotted-blue.png");
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0 20%;
+  transition: 4s;
+}
+.tictactoe-firstrow {
+  display: flex;
+  justify-content: center;
+}
+#tictactoe-title {
+  width: fit-content;
+  font-size: 4rem;
+  color: #a7f1fc;
+}
+#tictactoe-img {
+  min-width: 300px;
+  width: 70vw;
+}
+
+/* tictactoe section */
+.cicada-section {
+  margin-top: 0px;
+  height: 100vh;
+  width: 60vw;
+  background-image: url("./assets/tictactoe/dotted-blue.png");
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0 20%;
+  transition: 4s;
+}
+.cicada-firstrow {
+  display: flex;
+  justify-content: center;
+}
+#cicada-title {
+  width: fit-content;
+  font-size: 4rem;
+  color: #8b9f47;
+}
+#cicada-img {
+  min-width: 300px;
+  width: 70vw;
 }

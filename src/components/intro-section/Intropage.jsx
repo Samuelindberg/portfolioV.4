@@ -8,7 +8,6 @@ export default function intropage() {
       window.addEventListener("scroll", () => {
         requestAnimationFrame(() => MoveDesc());
         hasMoved.current = true;
-        console.log(hasMoved.current);
       });
     }
     return () => {
@@ -21,7 +20,7 @@ export default function intropage() {
     desc.current.style.color = "#494949";
   }
   return (
-    <section className="intro-section">
+    <section className="intro-section flex-center-column">
       <div className="intro-content">
         <IntroTitle />
         <p ref={desc} id="intro-desc">
