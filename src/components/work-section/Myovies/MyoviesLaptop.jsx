@@ -2,7 +2,7 @@ import { React, useState, useRef } from "react";
 import MyoviesStartpage from "../../../assets/myovies-startpage-laptop.png";
 import searchpageLaptop from "../../../assets/myovies-searchpage-laptop.png";
 import ratingLaptop from "../../../assets/myovies-ratinglaptop.png";
-export default function myoviesLaptop() {
+export default function myoviesLaptop(props) {
   const [imageIndex, setImageIndex] = useState(0);
   const laptopImageSource = [MyoviesStartpage, searchpageLaptop, ratingLaptop];
   setInterval(() => {
@@ -14,6 +14,7 @@ export default function myoviesLaptop() {
   }, 4000);
   return (
     <img
+      ref={props.myoviesRef}
       id="myovies-startpage-laptop"
       src={laptopImageSource[imageIndex]}
       alt=""

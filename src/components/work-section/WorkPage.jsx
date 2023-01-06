@@ -8,8 +8,8 @@ export default function WorkPage() {
     <section className="work-section flex-center-column">
       <h1 id="worktitle">WORK</h1>
       <MyoviesSection />
-      <TicTacToeSection />
       <CicadaSection />
+      <TicTacToeSection />
     </section>
   );
 }

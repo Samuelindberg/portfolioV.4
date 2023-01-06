@@ -5,7 +5,9 @@ export default function Nav() {
   return (
     <nav id="nav-bar">
       <div id="nav-a">
-        <a href="#myovies-title">Work</a>
+        <a id="nav-work" href="#myovies-title">
+          Work
+        </a>
         <a href="">About me</a>
         <a href="">Contact</a>
       </div>
