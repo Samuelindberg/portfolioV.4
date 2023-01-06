@@ -1,6 +1,6 @@
 import { React, useRef, useEffect } from "react";
 import CicadaFirstRow from "./CicadaFirstRow";
-import CicadaDesc from "./CicadaDesc";
+import CicadaLaptop from "./CicadaLaptop";
 import WorkDesc from "../WorkDesc";
 export default function TicTacToeSection() {
   const Section = useRef(null);
@@ -23,12 +23,10 @@ export default function TicTacToeSection() {
     };
   }, []);
   return (
-    <section ref={Section} className="cicada-section flex-center-column ">
-      <div className="cicada-container">
-        <h1 id="cicada-title">Cicada Catering</h1>
-        <CicadaFirstRow />
-        <WorkDesc id="cicada-desc" desc={desc} />
-      </div>
+    <section ref={Section} className="cicada-section">
+      <h1 id="cicada-title">Cicada Catering</h1>
+      <CicadaLaptop />
+      <WorkDesc id="cicada-desc" desc={desc} />
     </section>
   );
 }

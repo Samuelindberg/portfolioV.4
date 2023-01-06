@@ -13,9 +13,5 @@ export default function TicTacToeLaptop() {
       setImageIndex(0);
     }
   }, 4000);
-  return (
-    <div className="cicada-firstrow">
-      {<img id="cicada-img" src={laptopImageSource[imageIndex]} alt="" />}
-    </div>
-  );
+  return <img id="cicada-img" src={laptopImageSource[imageIndex]} alt="" />;
 }
