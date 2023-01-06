@@ -13,6 +13,7 @@
   padding: 25px;
   margin-top: 20px;
   border-radius: 0.5rem;
+  font-size: 1rem;
   font-family: "Poppins";
   color: white;
   text-align: center;
@@ -54,27 +55,28 @@ body {
   font-family: "Poppins", sans-serif;
   padding: 3px 8px;
   text-decoration: none;
+  font-weight: 200;
   color: var(--primary);
-  margin: 5px 40px;
+  padding: 5px 40px;
+  border-radius: 3px;
 }
-#nav-a #nav-work {
-  background-color: var(--primary);
-  padding: 6px 30px;
-  color: white;
-  margin: 0;
-  border-radius: 0;
+#nav-bar a:hover {
+  color: #52aeff;
+  background-color: #86a8c539;
 }
+
 #nav-icons {
-  padding-left: 10px;
-  height: 100%;
-  background-color: var(--primary);
+  padding-right: 10px;
 }
 
 nav img {
   width: 20px;
   height: 20px;
-  padding: 5px;
+  padding: 7px;
   color: blue;
+}
+nav img:hover {
+  background-color: #86a8c539;
 }
 
 /* intro section */
@@ -232,7 +234,6 @@ nav img {
 
   background-attachment: fixed;
   background-size: cover;
-  padding: 10vh 0;
 }
 .myovies-container {
   gap: 20px;
@@ -256,21 +257,19 @@ nav img {
   color: #ff8d22;
 }
 .myovies-firstrow {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
   width: 80vw;
 }
 #myovies-startpage-laptop {
   /* width: minmax(400px, 30vw); */
-  min-width: 300px;
+  min-width: 400px;
   width: 50vw;
   z-index: 11;
   transition: 3s ease-in-out;
   transform: translateY(10vh) scale(1.2);
 }
 #myovies-desc-phone {
-  width: 150px;
+  width: 10%;
+  min-width: 150px;
   transform: scale(0.8);
   transition: 3s ease-in-out;
 }
@@ -290,14 +289,13 @@ nav img {
   width: 80vw;
   display: grid;
   grid-template-columns: 60vw 35vw;
-  padding: 15vh 0;
+
   transition: 7s;
 }
 
 #cicada-title {
   text-align: start;
-  width: 30vw;
-  white-space: nowrap;
+
   color: #8ba046;
   font-size: 4rem;
   padding: 20px 0;
@@ -321,6 +319,14 @@ nav img {
   text-align: start;
   /* transition-delay: 5s; */
   color: var(--light-text);
+}
+@media screen and (max-width: 660px) {
+  .cicada-section {
+    grid-column: 1/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 /* tictactoe section */
 .tictactoe-section {
@@ -351,4 +357,83 @@ nav img {
   color: var(--light-text);
   padding: 10px 10%;
   transition: 3s;
+}
+
+/* about me section */
+.aboutme-firstrow {
+  margin: 0 15%;
+  padding: 20vh 30px;
+  display: grid;
+  column-gap: 50px;
+}
+#aboutme-title {
+  font-size: 4rem;
+  color: var(--dark-text);
+}
+#aboutme-img {
+  max-width: 500px;
+  grid-row: 1/5;
+}
+.aboutme-firstrow p {
+  color: var(--light-text);
+  text-align: start;
+  padding: 0;
+}
+#aboutme-desc {
+  grid-column: 2;
+}
+
+/* education */
+.education-container {
+  padding-bottom: 10vh;
+}
+#education-title {
+  font-size: 4rem;
+  color: var(--dark-text);
+}
+.education-item {
+  margin: 20px;
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  column-gap: 20px;
+  padding-bottom: 10px;
+  border-bottom: var(--primary) 1px solid;
+}
+/* .education-item-left {
+  transform: translateX(-70vw);
+}
+.education-item-right {
+  transform: translateX(70vw);
+} */
+.education-name {
+  font-size: 2rem;
+  grid-column: 2/4;
+  color: var(--light-text);
+}
+.education-course {
+  font-size: 1.5rem;
+  font-weight: 300;
+  grid-row: 2;
+}
+.education-desc {
+  grid-column: 1/5;
+  color: var(--light-text);
+}
+.education-item img {
+  width: 70px;
+  grid-row: 1/3;
+  /* padding: 0 10px 10px 0; */
+}
+
+/* Contact */
+.contact-section {
+  width: 100vw;
+  height: 100vh;
+}
+.contact-title-content {
+  display: flex;
+  align-items: center;
+  border-bottom: var(--primary) 1px solid;
+  padding-bottom: 10px;
 }

@@ -25,9 +25,6 @@ export default function IntroTextContent() {
       <div className="nameContainer">
         <h1 id="name">SAMUEL LINDBERG</h1>
         <h2 id="juniordev">Junior Software Developer</h2>
-        {/* <h2 ref={graphicTitle} id="graphic-title">
-          and Graphic Designer!
-        </h2> */}
       </div>
     </div>
   );
