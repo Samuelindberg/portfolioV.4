@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useRef, useEffect } from "react";
 import introScreen from "../../../assets/Cicada/cicada-intro.png";
 import menu from "../../../assets/Cicada/cicada-menu.png";
 import buffe from "../../../assets/Cicada/cicada-buffe.png";
@@ -6,6 +6,20 @@ import buffe from "../../../assets/Cicada/cicada-buffe.png";
 export default function TicTacToeLaptop() {
   const [imageIndex, setImageIndex] = useState(0);
   const laptopImageSource = [introScreen, menu, buffe];
+  const laptop = useRef(null);
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+        }
+      });
+    });
+    observer.observe(laptop.current);
+    return () => {
+      observer.unobserve(laptop.current);
+    };
+  }, []);
   setInterval(() => {
     if (imageIndex < laptopImageSource.length - 1) {
       setImageIndex(imageIndex + 1);
@@ -13,5 +27,12 @@ export default function TicTacToeLaptop() {
       setImageIndex(0);
     }
   }, 4000);
-  return <img id="cicada-img" src={laptopImageSource[imageIndex]} alt="" />;
+  return (
+    <img
+      ref={laptop}
+      id="cicada-img"
+      src={laptopImageSource[imageIndex]}
+      alt=""
+    />
+  );
 }

@@ -8,9 +8,7 @@
 .App {
   overflow-x: hidden;
 }
-body {
-  scroll-behavior: smooth;
-}
+
 .work-desc {
   padding: 25px;
   margin-top: 20px;
@@ -61,8 +59,8 @@ body {
 }
 #nav-a #nav-work {
   background-color: var(--primary);
-  color: white;
   padding: 6px 30px;
+  color: white;
   margin: 0;
   border-radius: 0;
 }
@@ -239,7 +237,6 @@ nav img {
 .myovies-container {
   gap: 20px;
   margin: 0 15%;
-  background-color: var(--primary);
   /* background-color: rgba(255, 255, 255, 0.699); */
   backdrop-filter: blur(10px);
   padding: 20px;
@@ -269,9 +266,13 @@ nav img {
   min-width: 300px;
   width: 50vw;
   z-index: 11;
+  transition: 3s ease-in-out;
+  transform: translateY(10vh) scale(1.2);
 }
 #myovies-desc-phone {
-  width: 200px;
+  width: 150px;
+  transform: scale(0.8);
+  transition: 3s ease-in-out;
 }
 
 .myovies-secondrow {
@@ -282,6 +283,7 @@ nav img {
   opacity: 0;
   transition: 3s;
   transition-delay: 1.5s;
+  color: var(--light-text);
 }
 /* cicada section */
 .cicada-section {
@@ -307,6 +309,8 @@ nav img {
   min-width: 300px;
   width: 80vw;
   transform: translateX(-20vw);
+  opacity: 0;
+  transition: 2s;
 }
 #cicada-desc {
   max-width: 70vw;
@@ -321,7 +325,7 @@ nav img {
 /* tictactoe section */
 .tictactoe-section {
   height: 100vh;
-  background-image: url("./assets/darkfog.png");
+  /* background-image: url("./assets/darkfog.png"); */
   background-attachment: fixed;
   background-size: cover;
   transition: 4s;
@@ -334,15 +338,17 @@ nav img {
   padding: 20px 0;
   width: fit-content;
   font-size: 4rem;
-  color: #a7f1fc;
+  color: #ef855b;
 }
 #tictactoe-img {
   min-width: 300px;
-  width: 70vw;
+  width: 60vw;
   z-index: 11;
   transform: scale(0.8);
   transition: 6s;
 }
 #tictactoe-desc {
-  color: black;
+  color: var(--light-text);
+  padding: 10px 10%;
+  transition: 3s;
 }
