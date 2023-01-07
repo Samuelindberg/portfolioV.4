@@ -6,10 +6,10 @@ export default function Nav() {
   return (
     <nav id="nav-bar">
       <div id="nav-a">
-        <a id="nav-work" href="#myovies-title">
+        <a id="nav-work" href="/#myovies-title">
           Work
         </a>
-        <a href="#about-me">About me</a>
+        <a href="/#about-me">About me</a>
         <Link to="/contact">Contact</Link>
       </div>
       <div id="nav-icons">
