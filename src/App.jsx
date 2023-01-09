@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className="App">
-      {/* <Nav /> */}
+      <Nav />
       <HamburgerMenu />
       <Routes>
         <Route path="/" element={<IntroPageContainer />} />
