@@ -1,7 +1,9 @@
 import "./App.css";
 import Nav from "./components/Nav";
+import HamburgerMenu from "./components/HamburgerMenu";
 import IntroPageContainer from "./components/IntroPageContainer";
 import ContactPage from "./components/ContactPage/ContactPage";
+
 import { Route, Routes } from "react-router-dom";
 import { useRef, useEffect } from "react";
 function App() {
@@ -9,7 +11,8 @@ function App() {
 
   return (
     <div className="App">
-      <Nav />
+      {/* <Nav /> */}
+      <HamburgerMenu />
       <Routes>
         <Route path="/" element={<IntroPageContainer />} />
         <Route path="/contact" element={<ContactPage />} />

@@ -51,17 +51,20 @@ body {
   font-family: "Josefin Sans", sans-serif;
   z-index: 10;
 }
-
+@media screen and (max-width: 510px) {
+  #nav-bar a {
+    padding: 0;
+  }
+}
 #nav-bar a {
-  /* border: solid 1px white; */
   font-family: "Poppins", sans-serif;
-  padding: 3px 8px;
   text-decoration: none;
   font-weight: 200;
   color: var(--primary);
   padding: 5px 40px;
   border-radius: 3px;
 }
+
 #nav-bar a:hover {
   color: #52aeff;
   background-color: #86a8c539;
@@ -80,7 +83,37 @@ nav img {
 nav img:hover {
   background-color: #86a8c539;
 }
-
+/* hamburger menu */
+.hamburger-icon {
+  width: fit-content;
+  padding: 10px;
+  position: absolute;
+  z-index: 12;
+}
+.hamburger-bar {
+  width: 32px;
+  height: 3px;
+  border-radius: 3px;
+  margin: 5px;
+  background-color: black;
+}
+.hamburger-links {
+  transition: all 1.5s;
+  z-index: 11;
+  display: none;
+  height: 100vh;
+  transform: scale(0.5);
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  position: absolute;
+  inset: 0;
+  background-color: var(--primary);
+}
+.hamburger-links a {
+  width: fit-content;
+}
 /* intro section */
 .intro-section {
   width: 100vw;
