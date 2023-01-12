@@ -22,7 +22,6 @@ export default function SkillsPage() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            skillsSection.current.style.transform = "translateX(0)";
             skillsSection.current.style.opacity = 1;
             skillsSection.current.scrollIntoView({ behavior: "smooth" });
           }

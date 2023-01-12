@@ -18,22 +18,23 @@ export default function myoviesLaptop(props) {
       });
     });
     observer.observe(phone.current);
+    setInterval(() => {
+      laptopRef.current.style.opacity = 1;
+      if (imageIndex < laptopImageSource.length - 1) {
+        setImageIndex(imageIndex + 1);
+      } else {
+        setImageIndex(0);
+      }
+      // setTimeout(() => {
+      //   laptopRef.current.style.opacity = 0;
+      // }, 400);
+      // laptopRef.current.style.opacity = 1;
+    }, 7000);
     return () => {
       observer.unobserve(phone.current);
     };
   }, []);
-  setInterval(() => {
-    laptopRef.current.style.opacity = 1;
-    if (imageIndex < laptopImageSource.length - 1) {
-      setImageIndex(imageIndex + 1);
-    } else {
-      setImageIndex(0);
-    }
-    // setTimeout(() => {
-    //   laptopRef.current.style.opacity = 0;
-    // }, 400);
-    // laptopRef.current.style.opacity = 1;
-  }, 7000);
+
   return (
     <>
       <img

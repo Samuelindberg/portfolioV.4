@@ -25,7 +25,7 @@ export default function ContactInfo() {
       <h1 id="contact-title">Contact Me</h1>
       {contactInfo.map((item) => {
         return (
-          <a target="_blank" href={item[3]}>
+          <a key={item[0]} target="_blank" href={item[3]}>
             <div className="contact-info" key={item[0]}>
               <img className="contact-icon" src={item[2]} alt="" />
               <h2 className="contact-info-title">{item[0]}</h2>

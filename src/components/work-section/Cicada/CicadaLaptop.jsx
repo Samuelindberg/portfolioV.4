@@ -16,17 +16,18 @@ export default function TicTacToeLaptop() {
       });
     });
     observer.observe(laptop.current);
+    setInterval(() => {
+      if (imageIndex < laptopImageSource.length - 1) {
+        setImageIndex(imageIndex + 1);
+      } else {
+        setImageIndex(0);
+      }
+    }, 4000);
     return () => {
       observer.unobserve(laptop.current);
     };
   }, []);
-  setInterval(() => {
-    if (imageIndex < laptopImageSource.length - 1) {
-      setImageIndex(imageIndex + 1);
-    } else {
-      setImageIndex(0);
-    }
-  }, 4000);
+
   return (
     <img
       ref={laptop}

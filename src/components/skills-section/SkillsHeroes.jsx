@@ -1,35 +1,37 @@
-import React from "react";
-import css from "../../assets/skills/css.png";
+import { React, useEffect, useState } from "react";
+import css from "../../assets/skills/css.svg";
 import git from "../../assets/skills/git.png";
 import github from "../../assets/skills/github.png";
-import html from "../../assets/skills/html.png";
-import illustrator from "../../assets/skills/illustrator.png";
-import indesign from "../../assets/skills/indesign.png";
+import html from "../../assets/skills/html.svg";
+import illustrator from "../../assets/skills/illustrator.svg";
+import indesign from "../../assets/skills/indesign.svg";
 import JavaScript from "../../assets/skills/Javascript.png";
 import restfulAPI from "../../assets/skills/RestfulAPI.png";
-import xd from "../../assets/skills/xd.png";
+import xd from "../../assets/skills/xd.svg";
 import reactImg from "../../assets/skills/react.svg";
 export default function SkillsHeroes() {
   const skills = [
-    [css, "CSS"],
-    [git, "Git"],
-    [github, "Github"],
     [html, "HTML"],
-    [illustrator, "Illustrator"],
-    [indesign, "Indesign"],
+    [css, "CSS"],
+    [reactImg, "ReactJS"],
     [JavaScript, "Javascript"],
     [restfulAPI, "RESTful API"],
+    [git, "Git"],
+    [github, "Github"],
+    [illustrator, "Illustrator"],
+    [indesign, "Indesign"],
     [xd, "XD"],
-    [reactImg, "ReactJS"],
   ];
   return (
     <div className="skills-heroes-content">
-      {skills.map((skill) => (
-        <div className="skill-heroes-item" key={skill[1]}>
-          <img src={skill[0]} alt="" />
-          <h1>{skill[1]}</h1>
-        </div>
-      ))}
+      {skills.map((skill, index) => {
+        return (
+          <div className="skill-heroes-item" key={skill[1]}>
+            <img src={skill[0]} alt="" />
+            <h1>{skill[1]}</h1>
+          </div>
+        );
+      })}
       <p id="skills-desc">
         As a skilled developer and designer, I have a strong foundation in HTML,
         CSS, JavaScript and React, as well as experience with APIs and popular

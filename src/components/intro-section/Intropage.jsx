@@ -24,15 +24,15 @@ export default function intropage() {
       <div className="intro-content">
         <IntroTitle />
         <p ref={desc} id="intro-desc">
-          Hi! I am a React developer and graphic designer. I am currently
-          attending a bootcamp to further develop my web development skills. I
-          am passionate about technology and have created websites and apps
-          using both React and Vanilla Javascript. <br /> I have been interested
-          in technology since I was twelve years old and built my first
-          computer. Since then, my interest has only grown stronger, and I have
-          spent my free time learning more about all things related to
-          technology. In recent years, I have also become interested in and
-          worked with graphic design.
+          Hi! I am a React developer and graphic designer. I have an internship
+          at Spark Plugin and am attending a Bootcamp to further develop my web
+          development skills. I am passionate about technology and have created
+          websites and apps using both React and Vanilla Javascript. <br /> I
+          have been interested in technology since I was twelve years old and
+          built my first computer. Since then, my interest has only grown
+          stronger, and I have spent my free time learning more about all things
+          related to technology. In recent years, I have also become interested
+          in and worked with graphic design.
         </p>
       </div>
     </section>

@@ -6,15 +6,28 @@ export default function Nav() {
   return (
     <nav id="nav-bar">
       <div id="nav-a">
-        <a id="nav-work" href="/#myovies-title">
+        <Link id="nav-work" to="/#myovies-title">
           Work
-        </a>
-        <a href="/#about-me">About me</a>
+        </Link>
+        <Link to="/#about-me">About me</Link>
         <Link to="/contact">Contact</Link>
       </div>
       <div id="nav-icons">
-        <img src={linkedin} alt="" />
-        <img src={github} alt="" />
+        <a
+          href="https://www.linkedin.com/in/samuel-lindberg-638404249/"
+          target="_blank"
+          id="linkedinlink"
+        >
+          {" "}
+          <img src={linkedin} alt="" />
+        </a>
+        <a
+          id="githublink"
+          href="https://github.com/samuelindberg"
+          target="_blank"
+        >
+          <img src={github} alt="" />
+        </a>
       </div>
     </nav>
   );
