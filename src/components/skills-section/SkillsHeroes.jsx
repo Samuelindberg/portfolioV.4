@@ -5,7 +5,7 @@ import github from "../../assets/skills/github.png";
 import html from "../../assets/skills/html.svg";
 import illustrator from "../../assets/skills/illustrator.svg";
 import indesign from "../../assets/skills/indesign.svg";
-import JavaScript from "../../assets/skills/Javascript.png";
+import JavaScript from "../../assets/skills/javascript.png";
 import restfulAPI from "../../assets/skills/RestfulAPI.png";
 import xd from "../../assets/skills/xd.svg";
 import reactImg from "../../assets/skills/react.svg";
