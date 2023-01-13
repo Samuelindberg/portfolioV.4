@@ -2,7 +2,6 @@ import { React, useState, useRef, useEffect } from "react";
 import input from "../../../assets/tictactoe/tictactoe-input.png";
 import playscreen from "../../../assets/tictactoe/tictactoe-play.png";
 import winscreen from "../../../assets/tictactoe/tictactoe-winscreen.png";
-// import play from "../../../assets/tictactoe-play.png";
 export default function TicTacToeLaptop() {
   const [imageIndex, setImageIndex] = useState(0);
   const laptopImageSource = [input, playscreen, winscreen];
