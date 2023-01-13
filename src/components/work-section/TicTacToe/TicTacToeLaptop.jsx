@@ -16,7 +16,7 @@ export default function TicTacToeLaptop() {
       });
     });
     observer.observe(image.current);
-    setInterval(() => {
+    const interval = setInterval(() => {
       if (imageIndex < laptopImageSource.length - 1) {
         setImageIndex(imageIndex + 1);
       } else {
@@ -24,7 +24,11 @@ export default function TicTacToeLaptop() {
       }
     }, 4000);
     return () => {
+      if (!image.current) {
+        return;
+      }
       observer.unobserve(image.current);
+      clearInterval(interval);
     };
   }, []);
 

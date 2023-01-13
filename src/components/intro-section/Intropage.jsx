@@ -16,6 +16,9 @@ export default function intropage() {
   }),
     [hasMoved];
   function MoveDesc() {
+    if (!desc.current) {
+      return;
+    }
     desc.current.style.opacity = 1;
     desc.current.style.color = "#494949";
   }

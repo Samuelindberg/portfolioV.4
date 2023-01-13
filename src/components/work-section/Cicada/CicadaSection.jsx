@@ -8,17 +8,18 @@ export default function TicTacToeSection() {
   useEffect(() => {
     let addSize = 0;
     const observer = new IntersectionObserver((entries) => {
-      console.log("works");
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.style.width = `${100}vw`;
-          console.log(addSize);
           addSize += 1;
         }
       });
     });
     observer.observe(Section.current);
     return () => {
+      if (!Section.current) {
+        return;
+      }
       observer.unobserve(Section.current);
     };
   }, []);

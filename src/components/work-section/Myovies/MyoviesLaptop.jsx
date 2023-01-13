@@ -18,7 +18,7 @@ export default function myoviesLaptop(props) {
       });
     });
     observer.observe(phone.current);
-    setInterval(() => {
+    const interval = setInterval(() => {
       laptopRef.current.style.opacity = 1;
       if (imageIndex < laptopImageSource.length - 1) {
         setImageIndex(imageIndex + 1);
@@ -31,7 +31,11 @@ export default function myoviesLaptop(props) {
       // laptopRef.current.style.opacity = 1;
     }, 7000);
     return () => {
+      if (!phone.current) {
+        return;
+      }
       observer.unobserve(phone.current);
+      clearInterval(interval);
     };
   }, []);
 

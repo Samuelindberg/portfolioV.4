@@ -12,6 +12,9 @@ export default function WorkDesc(props) {
     });
     observer.observe(desc.current);
     return () => {
+      if (!desc.current) {
+        return;
+      }
       observer.unobserve(desc.current);
     };
   }, []);

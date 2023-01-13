@@ -14,6 +14,9 @@ export default function SkillsPage() {
     });
     observer.observe(Title.current);
     return () => {
+      if (!Title.current) {
+        return;
+      }
       observer.unobserve(Title.current);
     };
   }, []);
@@ -32,6 +35,9 @@ export default function SkillsPage() {
     observer.observe(skillsSection.current);
 
     return () => {
+      if (!skillsSection.current) {
+        return;
+      }
       observer.unobserve(skillsSection.current);
     };
   }, []);

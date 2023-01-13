@@ -9,7 +9,6 @@ export default function HamburgerMenu() {
   const bar2 = useRef(null);
   const bar3 = useRef(null);
   useEffect(() => {
-    console.log(isOpen);
     if (isOpen) {
       hamburgerLinks.current.style.display = "flex";
       hamburgerLinks.current.style.transform = "scale(1)";

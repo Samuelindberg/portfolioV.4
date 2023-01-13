@@ -1,7 +1,6 @@
-import { React, useState, useRef, useEffect } from "react";
+import { React } from "react";
 
 export default function EducationCard(props) {
-  console.log(props);
   return (
     <>
       <img src={props.img} alt="" className="education-logo" />

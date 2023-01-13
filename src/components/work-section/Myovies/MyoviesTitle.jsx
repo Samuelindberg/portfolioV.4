@@ -28,6 +28,9 @@ export default function App() {
     });
     observer.observe(titleRef.current);
     return () => {
+      if (!titleRef.current) {
+        return;
+      }
       observer.unobserve(titleRef.current);
     };
   }, []);

@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useEffect, useState } from "react";
 import ContactIntro from "./ContactIntro";
 import ContactInfo from "./ContactInfo";
 export default function ContactPage() {
