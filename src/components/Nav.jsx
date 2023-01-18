@@ -6,7 +6,7 @@ export default function Nav() {
   return (
     <nav id="nav-bar">
       <div id="nav-a">
-        <Link id="nav-work" to="/#myovies-title">
+        <Link id="nav-work" to="/#worksection">
           Work
         </Link>
         <Link to="/#about-me">About me</Link>
