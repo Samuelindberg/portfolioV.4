@@ -1,8 +1,8 @@
 import { React, useEffect, useRef } from "react";
 import MyoviesFirstRow from "./MyoviesFirstRow";
-import MyoviesSecondRow from "./MyoviesSecondRow";
 import MyoviesTitle from "./MyoviesTitle";
 import WorkDesc from "../WorkDesc";
+import WorkButtons from "../WorkButtons";
 
 export default function MyoviesSection() {
   const myoviesImgRef = useRef(null);
@@ -18,6 +18,12 @@ export default function MyoviesSection() {
       <div className="myovies-container ">
         <MyoviesTitle />
         <MyoviesFirstRow myoviesRef={myoviesImgRef} />
+        <WorkButtons
+          name="myovies"
+          githuburl="https://github.com/Samuelindberg/movieratings"
+          siteurl="https://movieratings.vercel.app"
+          color="#FF983F"
+        />
         <WorkDesc id="myovies-desc" desc={desc} />
       </div>
     </section>

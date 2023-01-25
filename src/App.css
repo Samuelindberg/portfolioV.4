@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@100;200;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&family=Manrope:wght@700&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -28,6 +29,7 @@ html {
   --dark-text: #494848;
   --light-text: #767676;
   --lightest-text: #8d8c8c;
+  --myovies-orange: var(--myovies-orange);
 }
 .flex-center-column {
   display: flex;
@@ -285,6 +287,22 @@ nav img:hover {
   color: var(--dark-text);
   white-space: nowrap;
 }
+.work-buttons {
+  width: fit-content;
+  margin: auto;
+}
+.work-button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  opacity: 0.85;
+  border: solid 1px white;
+}
+.work-button:hover {
+  opacity: 1;
+}
+#myovies-github-button:hover {
+  background-color: var(--myovies-orange);
+}
 .myovies-section {
   padding-bottom: 100px;
 }
@@ -306,10 +324,11 @@ nav img:hover {
   color: #fe4500;
 }
 .myovies-ovies {
-  color: #ff8d22;
+  color: var(--myovies-orange);
 }
 .myovies-firstrow {
   width: 80vw;
+  padding-bottom: 3rem;
 }
 #myovies-startpage-laptop {
   /* width: minmax(400px, 30vw); */
@@ -338,6 +357,7 @@ nav img:hover {
   transition: 3s;
   transition-delay: 1.5s;
   color: var(--light-text);
+  margin: 0;
 }
 
 /* cicada section */
@@ -355,7 +375,7 @@ nav img:hover {
   font-size: 4rem;
   padding: 20px 0;
   grid-column: 2;
-  grid-row: 2;
+  grid-row: 1;
 }
 #cicada-img {
   grid-row: 1/5;
@@ -369,11 +389,17 @@ nav img:hover {
   max-width: 70vw;
   transition: 3s;
   opacity: 0;
-  grid-row: 3;
+  grid-row: 2;
   padding: 0;
   text-align: start;
   /* transition-delay: 5s; */
   color: var(--light-text);
+}
+.cicada-section .work-buttons {
+  grid-row: 3/5;
+  grid-row-start: 3;
+  align-self: flex-start;
+  justify-self: start;
 }
 @media screen and (max-width: 660px) {
   .cicada-section {
