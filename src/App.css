@@ -84,6 +84,7 @@ nav img:hover {
 .hamburger-nav {
   position: fixed;
   display: none;
+  z-index: 15;
 }
 .hamburger-icon {
   box-sizing: content-box;

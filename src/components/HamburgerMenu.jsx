@@ -30,9 +30,11 @@ export default function HamburgerMenu() {
         <div ref={bar3} className="hamburger-bar"></div>
       </div>
       <div ref={hamburgerLinks} className="hamburger-links">
+        <Link id="nav-work" to="/#worksection">
+          Work
+        </Link>
+        <Link to="/#about-me">About me</Link>
         <Link to="/contact">Contact</Link>
-        <Link to="/">Work</Link>
-        <Link to="/">Home</Link>
       </div>
     </nav>
   );
