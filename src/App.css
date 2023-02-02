@@ -29,7 +29,7 @@ html {
   --dark-text: #494848;
   --light-text: #767676;
   --lightest-text: #8d8c8c;
-  --myovies-orange: var(--myovies-orange);
+  --myovies-orange: #ff8d22;
 }
 .flex-center-column {
   display: flex;
