@@ -1,5 +1,5 @@
 import { React, useRef, useEffect } from "react";
-import TicTacToeFirstRow from "./TicTacToeFirstRow";
+import WorkButtons from "../WorkButtons";
 import TicTacToeLaptop from "./TicTacToeLaptop";
 import WorkDesc from "../WorkDesc";
 export default function TicTacToeSection() {
@@ -28,6 +28,12 @@ export default function TicTacToeSection() {
     <section ref={Section} className="tictactoe-section flex-center-column ">
       <h1 id="tictactoe-title">Tic Tac Toe</h1>
       <TicTacToeLaptop />
+      <WorkButtons
+        name="tictactoe"
+        githuburl="https://github.com/Samuelindberg/treirad"
+        siteurl="https://tictactoe-snowy-nine.vercel.app/"
+        color="#EF855B"
+      />
       <WorkDesc id="tictactoe-desc" desc={descContent} />
     </section>
   );
